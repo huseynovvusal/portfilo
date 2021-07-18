@@ -1,0 +1,326 @@
+:root{
+    --dark: #171717;
+    --gray: #444444;
+    --red: #DA0037;
+    --light: #ededed;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--light);
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.navbar{
+    background-color: var(--red);
+    box-shadow: 5px 0 20px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    z-index: 1000;
+    width: 100vw;
+    position: fixed;
+}
+
+.navbar h3{
+    color: var(--light);
+}
+.nav-item{
+    padding: 0.5rem 2rem;
+    transition: 300ms all ease-in-out;
+}
+.nav-item:hover .nav-link{
+    color: var(--red);
+}
+.nav-item:hover{
+    background-color: var(--light);
+}
+.navbar .nav-link{
+    color: var(--light);
+}
+.navbar-toggler-icon,.navbar-toggler{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+.navbar-toggler-icon i{
+    color: var(--light);
+}
+
+/* Corners and Home */
+
+.home{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.home .corner-top{
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    height: 25rem;
+    padding: 0;
+    margin: 0;
+    z-index: -100;
+}
+.home .corner-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    height: 25rem;
+    transform: rotate(180deg);
+    padding: 0;
+    margin: 0;
+    z-index: -100;
+}
+@media(max-width:540px) {
+    .home .corners{
+        display: none;
+    }
+    .home-elements svg{
+        width: 50vw;
+    }
+    .navbar h3{
+        margin-left: 1rem;
+    }
+    .navbar-toggler{
+        margin-right: 1rem;
+    }
+}
+.corner-top-2{
+    opacity: 0.2;
+    transform: scale(1.2);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.corner-top-3{
+    opacity: 0.05;
+    transform: scale(1.4);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Flat man */
+
+
+#like-1,#like-2,#like3{
+    animation: 3s like infinite;
+}
+@keyframes like {
+    0%{
+        transform: translatey(0);
+    }
+    50%{
+        transform: translatey(-5%);
+    }
+    100%{
+        transform: translatey(0%);
+    }
+}
+#eye-1,#eye-2{
+    animation: 8s eye infinite;
+
+}
+@keyframes eye {
+    0%{
+        opacity: 1;
+    }
+    96%{
+        opacity: 1;
+    }
+    98%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.opening-words h2{
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--red);
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+.opening-words h2 span{
+    color: var(--light);
+    background-color: var(--red);
+    border-radius: 0.25rem;
+    padding: 0.25rem 1rem;
+}
+
+
+.home-elements{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+}
+.home-elements .opening-words{
+    align-self: center;
+    justify-content: flex-start;
+}
+.home-elements svg{
+    align-self: flex-end;
+    justify-self: flex-start;
+}
+/* About me */
+
+.about-me{
+    background-color: var(--red);
+    width: 100vw;
+    margin: 0;
+    padding: 5rem 0;
+    color: var(--light);
+}
+
+
+/* Portfilo */
+
+.portfilo{
+    background-color: var(--red);
+    width: 100vw;
+    margin: 0;
+    padding: 5rem 0;
+    color: var(--light);;
+}
+.portfilo h5{
+    padding: 1.5rem 0;
+}
+.portfilo a{
+    padding: 0.5rem 1rem ;
+    background-color: var(--red);
+    border: 2px solid var(--light);
+    color: var(--light);
+    border-radius: 0.25rem;
+    transition: 300ms all ease-in-out;
+}
+.portfilo a:hover{
+    color: var(--red);
+    background-color: var(--light);
+    text-decoration: none;
+}
+.portfilo-words{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+}
+.knows,.program-knows{
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.knows ul,.program-knows ul{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.program-knows ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.program-knows ul li:first-child .round:last-child,.program-knows ul li:last-child .round:last-child{
+    background-color: var(--red);
+    border: 2px solid var(--light);
+}
+.knows ul li,.program-knows ul li{
+    list-style-type: none;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem;
+}
+.rounds{
+    display: flex;
+    justify-content: space-between;
+    width: 5rem;
+}
+.round{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--light);
+}
+.knows ul li:first-child .round:last-child{
+    background-color: var(--red);
+    border: 2px solid var(--light);
+}
+.knows ul li:nth-child(2) .round:last-child{
+    background-color: var(--red);
+    border: 2px solid var(--light);
+}
+.knows ul li:nth-child(3) .round:last-child{
+    background-color: var(--red);
+    border: 2px solid var(--light);
+}
+.knows ul li:nth-child(4) .round:nth-child(3),.knows ul li:nth-child(4) .round:nth-child(4),.knows ul li:nth-child(4) .round:nth-child(5){
+    background-color: var(--red);
+    border: 2px solid var(--light);
+}
+
+
+/* Footer */
+footer{
+    width: 100vw;
+}
+footer .container{
+    color: var(--red);
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    padding: 0 3rem;
+    align-items: center;
+}
+.left-side{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+}
+.e-mail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.e-mail h5{
+    padding-left: 1rem;
+    margin-bottom: 0.4rem;
+}
+.left-side i{
+    font-size: 1.3rem;
+}
+.right-side i{
+    padding-left: 1rem;
+    font-size: 1.3rem;
+}
+.right-side a{
+    color: var(--red);
+}
+.right-side a:hover{
+    opacity: 0.9;
+}
